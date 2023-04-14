@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Предсказание свойств композитных материалов</title>
+<meta name="author" content="Марина Запорожец">
+<link href="{{ url_for('static', filename='/main.css')}}" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+<input type="submit" id="Button1" onclick="window.location.href='{{url_for('matrix_filler_predict')}}';return false;" name="Матрица-наполнитель" value="Матрица-наполнитель" style="position:absolute;left:118px;top:473px;width:328px;height:25px;z-index:0;">
+<input type="submit" id="Button2" onclick="window.location.href='{{url_for('modul_elastic_predict')}}';return false;" name="Модуль упругости при растяжении" value="Модуль упругости при растяжении" style="position:absolute;left:119px;top:509px;width:328px;height:25px;z-index:1;">
+<input type="submit" id="Button3" onclick="window.location.href='{{url_for('tensile_strength_predict')}}';return false;" name="Прочность при растяжении" value="Прочность при растяжении" style="position:absolute;left:118px;top:545px;width:328px;height:25px;z-index:2;">
+<div id="wb_Text1" style="position:absolute;left:504px;top:32px;width:418px;height:525px;text-align:justify;z-index:3;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:16px;line-height:21px;"><strong>Композиционные материалы</strong> - это искусственно созданные материалы, состоящие из нескольких других с четкой границей между ними. Композиты обладают теми свойствами, которые не наблюдаются у компонентов по отдельности. При этом композиты являются монолитным материалом, т.е. компоненты материала неотделимы друг от друга без разрушения конструкции в целом. Яркий пример композита - железобетон. Бетон прекрасно сопротивляется сжатию, но плохо растяжению. Стальная арматура внутри бетона компенсирует его неспособность сопротивляться сжатию, формируя тем самым новые, уникальные свойства. Современные композиты изготавливаются из других материалов: полимеры, керамика, стеклянные и углеродные волокна, но данный принцип сохраняется. У такого подхода есть и недостаток: даже если мы знаем характеристики исходных компонентов, определить характеристики композита, состоящего из этих компонентов, достаточно проблематично. Для решения этой проблемы есть два пути: физические испытания образцов материалов, или прогнозирование характеристик. Суть прогнозирования заключается в симуляции представительного элемента объема композита на основе данных о характеристиках входящих компонентов (связующего и армирующего компонента).<br></span></div>
+
+<div id="wb_Image1" style="position:absolute;left:119px;top:32px;width:326px;height:207px;z-index:4;">
+<img src="{{ url_for('static', filename='/kompozicionnye-materialy.jpg/')}}" id="Image1" alt=""></div>
+
+<div id="wb_Text2" style="position:absolute;left:119px;top:362px;width:328px;height:95px;text-align:justify;z-index:5;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:16px;">На вход подаются данные о начальных свойствах компонентов композиционных материалов (количество связующего, наполнителя, температурный режим отверждения и т.д.).</span></div>
+
+<div id="wb_Text3" style="position:absolute;left:119px;top:259px;width:326px;height:103px;text-align:justify;z-index:6;">
+<span style="color:#000000;font-family:'Times New Roman';font-size:19px;"><strong>Предсказание конечных свойств получаемых композиционных материалов по имеющимся измерениям.</strong></span><span style="color:#000000;font-family:'Times New Roman';font-size:16px;"><br></span></div>
+
+</div>
+</body>
+</html>
