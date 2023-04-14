@@ -23,7 +23,7 @@ def matrix_filler(params):
     
 def tensile_strength(params):
     params = pd.DataFrame(params).T
-    minmax_load = pickle.load(open('./models/minmax.pkl', 'rb'))
+    minmax_load = pickle.load(open('./models/robust_sc.pkl', 'rb'))
     minmax_scal = minmax_load.transform(params)
     model = tf.keras.models.load_model('./models/tensile_strength')
     minmax_scal = minmax_scal
